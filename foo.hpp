@@ -10,9 +10,7 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {
-	std::vector<char> retval;
-	retval.reserve(people.size());
-
+	std::vector<char> retval(people.size());
 
 	std::for_each(people.begin(), people.end(), [](Human& human) {
 		human.birthday();
